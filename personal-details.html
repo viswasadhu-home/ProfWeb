@@ -6,6 +6,56 @@
     <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
+    <header>
+        <h1>Welcome to My Professional Website</h1>
+        <div class="header-bar">
+            <!-- Header Navigation Bar -->
+            <nav class="header-nav">
+                <ul>
+                    <!-- Home Button -->
+                    <li>
+                        <button onclick="window.location.href='index.html'" style="margin-right:1em;padding:0.5em 1em;border:none;background:#005bea;color:#fff;border-radius:4px;cursor:pointer;font-weight:bold;">
+                            Home
+                        </button>
+                    </li>
+                    <li class="dropdown">
+                        <a href="about.html">About</a>
+                        <ul class="dropdown-content">
+                            <li><a href="personal-details.html">Personal Details</a></li>
+                            <li><a href="prof-experience.html">Professional Experience</a></li>
+                            <li><a href="assignments.html">Assignments</a></li>
+                            <li><a href="skills.html">Skills</a></li>
+                            <li><a href="certifications.html">Certifications</a></li>
+                            <li><a href="awards.html">Awards</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Theme Switcher Dropdown Button -->
+            <div class="theme-switcher top-right">
+                <button id="themeDropdownBtn">🎨 Theme</button>
+                <div id="themeDropdown" class="theme-dropdown-content">
+                    <button data-theme="office-blue">Office Blue</button>
+                    <button data-theme="office-orange">Office Orange</button>
+                    <button data-theme="office-green">Office Green</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Side Navigation Bar -->
+    <aside class="side-nav">
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="personal-details.html">Personal Details</a></li>
+            <li><a href="prof-experience.html">Professional Experience</a></li>
+            <li><a href="assignments.html">Assignments</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="awards.html">Awards</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </aside>
     <main>
         <section>
             <h2>Personal Details</h2>
