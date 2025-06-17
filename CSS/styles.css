@@ -1,0 +1,388 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li, nav, aside, main, footer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #f0f4f8 0%, #e0eafc 100%);
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(90deg, #005bea 0%, #3ec6e0 100%);
+    color: #fff;
+    padding: 1.5rem 2rem 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Header Navigation Bar */
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.header-nav li {
+    position: relative;
+}
+
+.header-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: background 0.2s, color 0.2s;
+    border-radius: 4px;
+}
+
+.header-nav a:hover, .header-nav .dropdown:hover > a {
+    background: rgba(255,255,255,0.15);
+    color: #ffe082;
+}
+
+.header-nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background: #fff;
+    color: #222;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+    border-radius: 6px;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+}
+
+.header-nav .dropdown-content li a {
+    color: #222;
+    padding: 0.75rem 1rem;
+    border-radius: 0;
+}
+
+.header-nav .dropdown-content li a:hover {
+    background: #f0f4f8;
+    color: #005bea;
+}
+
+.header-nav .dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.3s;
+}
+
+/* Side Navigation Bar */
+.side-nav {
+    position: fixed;
+    top: 5.5rem;
+    left: 0;
+    width: 220px;
+    height: calc(100% - 5.5rem);
+    background: linear-gradient(180deg, #3ec6e0 0%, #005bea 100%);
+    padding-top: 2rem;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.07);
+    z-index: 10;
+}
+
+.side-nav ul {
+    list-style: none;
+}
+
+.side-nav li {
+    position: relative;
+}
+
+.side-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    display: block;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.side-nav a:hover, .side-nav .dropdown:hover > a {
+    background: rgba(255,255,255,0.12);
+    color: #ffe082;
+}
+
+.side-nav .dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    min-width: 160px;
+    background: #fff;
+    color: #222;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.10);
+    border-radius: 6px;
+    z-index: 100;
+}
+
+.side-nav .dropdown-content li a {
+    color: #222;
+    padding: 0.75rem 1rem;
+    border-radius: 0;
+}
+
+.side-nav .dropdown-content li a:hover {
+    background: #e0eafc;
+    color: #005bea;
+}
+
+.side-nav .dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.3s;
+}
+
+/* Main content layout */
+main {
+    margin-left: 240px;
+    padding: 2rem;
+    flex: 1;
+    background: rgba(255,255,255,0.85);
+    min-height: 80vh;
+}
+
+section {
+    margin-bottom: 2rem;
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+h2 {
+    color: #005bea;
+    margin-bottom: 0.75rem;
+}
+
+/* Footer styles */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-top: auto;
+}
+
+/* Header bar flex for nav + theme button */
+.header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Theme Switcher in top right */
+.theme-switcher.top-right {
+    position: relative;
+    left: auto;
+    top: auto;
+    margin-left: auto;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+}
+
+.theme-switcher.top-right #themeDropdownBtn {
+    margin-bottom: 0;
+}
+
+.theme-switcher.top-right .theme-dropdown-content {
+    left: auto;
+    right: 0;
+    top: 2.5rem;
+}
+
+/* Remove old fixed position for .theme-switcher */
+.theme-switcher:not(.top-right) {
+    position: fixed;
+    top: 1.5rem;
+    left: 240px;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Theme Switcher Styles */
+.theme-switcher {
+    position: fixed;
+    top: 1.5rem;
+    left: 240px;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#themeDropdownBtn {
+    background: #fff;
+    color: #005bea;
+    border: 2px solid #005bea;
+    border-radius: 6px;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 0.2rem;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+}
+#themeDropdownBtn:hover {
+    background: #e0eafc;
+}
+.theme-dropdown-content {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    min-width: 140px;
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    z-index: 1002;
+}
+.theme-dropdown-content button {
+    background: none;
+    border: none;
+    padding: 0.7rem 1rem;
+    text-align: left;
+    font-size: 1rem;
+    color: #005bea;
+    cursor: pointer;
+    border-radius: 0;
+    transition: background 0.2s, color 0.2s;
+}
+.theme-dropdown-content button:hover {
+    background: #e0eafc;
+    color: #222;
+}
+
+/* Theme Variables */
+:root {
+    --primary: #005bea;
+    --secondary: #3ec6e0;
+    --accent: #ffe082;
+    --bg-gradient: linear-gradient(120deg, #f0f4f8 0%, #e0eafc 100%);
+    --header-gradient: linear-gradient(90deg, #005bea 0%, #3ec6e0 100%);
+    --side-gradient: linear-gradient(180deg, #3ec6e0 0%, #005bea 100%);
+}
+
+/* Office Blue Theme (default) */
+body {
+    background: var(--bg-gradient);
+    color: #222;
+}
+header {
+    background: var(--header-gradient);
+}
+.side-nav {
+    background: var(--side-gradient);
+}
+h2 {
+    color: var(--primary);
+}
+.header-nav a, .side-nav a {
+    color: #fff;
+}
+.header-nav a:hover, .header-nav .dropdown:hover > a,
+.side-nav a:hover, .side-nav .dropdown:hover > a {
+    color: var(--accent);
+}
+
+/* Office Orange Theme */
+body.office-orange {
+    --primary: #ff6f00;
+    --secondary: #ffd54f;
+    --accent: #1976d2;
+    --bg-gradient: linear-gradient(120deg, #fff3e0 0%, #ffe0b2 100%);
+    --header-gradient: linear-gradient(90deg, #ff6f00 0%, #ffd54f 100%);
+    --side-gradient: linear-gradient(180deg, #ffd54f 0%, #ff6f00 100%);
+}
+body.office-orange h2 {
+    color: var(--primary);
+}
+body.office-orange .header-nav a, 
+body.office-orange .side-nav a {
+    color: #fff;
+}
+body.office-orange .header-nav a:hover, 
+body.office-orange .header-nav .dropdown:hover > a,
+body.office-orange .side-nav a:hover, 
+body.office-orange .side-nav .dropdown:hover > a {
+    color: var(--accent);
+}
+
+/* Office Green Theme */
+body.office-green {
+    --primary: #43a047;
+    --secondary: #b2ff59;
+    --accent: #ffeb3b;
+    --bg-gradient: linear-gradient(120deg, #e8f5e9 0%, #b2ff59 100%);
+    --header-gradient: linear-gradient(90deg, #43a047 0%, #b2ff59 100%);
+    --side-gradient: linear-gradient(180deg, #b2ff59 0%, #43a047 100%);
+}
+body.office-green h2 {
+    color: var(--primary);
+}
+body.office-green .header-nav a, 
+body.office-green .side-nav a {
+    color: #fff;
+}
+body.office-green .header-nav a:hover, 
+body.office-green .header-nav .dropdown:hover > a,
+body.office-green .side-nav a:hover, 
+body.office-green .side-nav .dropdown:hover > a {
+    color: var(--accent);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .side-nav {
+        position: static;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+        padding-top: 0.5rem;
+    }
+    main {
+        margin-left: 0;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    header, .header-nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header-nav ul {
+        gap: 0.5rem;
+    }
+    .side-nav {
+        display: none;
+    }
+    main {
+        padding: 0.5rem;
+    }
+}
+
+/* Dropdown animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px);}
+    to { opacity: 1; transform: translateY(0);}
+}

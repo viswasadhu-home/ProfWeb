@@ -1,0 +1,112 @@
+body {
+   ;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Side Navigation Bar */
+.side-nav {
+    position: fixed;
+    top: 70px; /* Height of header */
+    left: 0;
+    width: 220px;
+    height: calc(100% - 70px);
+    background-color: #4CAF50;
+    z-index: 10;
+    padding-top: 1em;
+}
+
+.side-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-nav li {
+    position: relative;
+}
+
+.side-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.75em 1.5em;
+    display: block;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+
+/* Submenu default background and hover */
+.side-nav .dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    min-width: 160px;
+    background-color: #388e3c; /* darker green for submenu */
+    color: #fff;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.10);
+    border-radius: 6px;
+    z-index: 100;
+}
+
+.side-nav .dropdown-content li a {
+    color: #fff;
+    background-color: #388e3c;
+    padding: 0.75em 1em;
+    border-radius: 0;
+}
+
+.side-nav .dropdown-content li a:hover {
+    background-color: #81c784; /* lighter green on hover */
+    color: #222;
+}
+
+.side-nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Make sure main content is not under side nav */
+main {
+    padding: 2em;
+    margin-left: 220px;
+    min-height: 80vh;
+    margin-top: 70px; /* Height of header */
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    animation: fadeIn 2s;
+    position: fixed;      /* Make header fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+main {
+    padding: 2em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
