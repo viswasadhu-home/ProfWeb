@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Professional Website</title>
-    <link rel="stylesheet" href="/HTML/CSS/styles.css" />
+    <meta name="description" content="Professional profile, experience, skills, assignments, certifications, and contact information." />
+    <title>Professional Portfolio</title>
+    <link rel="stylesheet" href="CSS/styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Professional Website</h1>
+    <header class="site-header">
         <div class="header-bar">
-            <!-- Header Navigation Bar -->
+            <a class="site-brand" href="index.html" aria-label="Portfolio home">Professional <span>Portfolio</span></a>
             <nav class="header-nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
                     <li class="dropdown">
-                        <a href="about.html">About</a>
+                        <a href="About.html">Profile</a>
                         <ul class="dropdown-content">
                             <li><a href="personal-details.html">Personal Details</a></li>
                             <li><a href="prof-experience.html">Professional Experience</a></li>
@@ -28,53 +27,55 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <!-- Theme Switcher Dropdown Button -->
-            <div class="theme-switcher top-right">
-                <button id="themeDropdownBtn">🎨 Theme</button>
-                <div id="themeDropdown" class="theme-dropdown-content">
-                    <button data-theme="office-blue">Office Blue</button>
-                    <button data-theme="office-orange">Office Orange</button>
-                    <button data-theme="office-green">Office Green</button>
-                </div>
-            </div>
         </div>
     </header>
-    <!-- Side Navigation Bar -->
-    <aside class="side-nav">
-        <div class="profile-box">
-            <div class="profile-photo">
-                <!-- Replace src with your photo when ready -->
-                <img src="img/profile-placeholder.png" alt="Your Photo" />
-            </div>
-            <div class="profile-contact">
-                <div class="profile-email">your.email@example.com</div>
-                <div class="profile-phone">+1-234-567-8901</div>
-            </div>
-        </div>
-        <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="personal-details.html">Personal Details</a></li>
-            <li><a href="prof-experience.html">Professional Experience</a></li>
-            <li><a href="assignments.html">Assignments</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="certifications.html">Certifications</a></li>
-            <li><a href="awards.html">Awards</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </aside>
     <main>
-        <section>
-            <h2>About Us</h2>
-            <p>This is a professional website created with HTML, CSS, and JavaScript.</p>
+        <section class="intro-section" aria-labelledby="intro-title">
+            <div class="intro-copy">
+                <p class="eyebrow">Professional profile</p>
+                <h1 id="intro-title">A clear view of my work, experience, and growth.</h1>
+                <p class="intro-summary">Explore my professional background, the skills I bring to each opportunity, and selected work from my career.</p>
+                <div class="intro-actions">
+                    <a class="button button-primary" href="prof-experience.html">View experience <span aria-hidden="true">&#8594;</span></a>
+                    <a class="text-link" href="contact.html">Get in touch</a>
+                </div>
+            </div>
+            <figure class="portrait-frame">
+                <img src="img/profile-placeholder.png" alt="Professional portrait" />
+                <figcaption>Professional profile</figcaption>
+            </figure>
         </section>
-        <section>
-            <h2>Services</h2>
-            <p>We offer a variety of services to meet your needs.</p>
+        <section class="profile-section" aria-labelledby="explore-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Explore</p>
+                    <h2 id="explore-title">A little more about my work</h2>
+                </div>
+                <a class="text-link" href="About.html">View profile <span aria-hidden="true">&#8594;</span></a>
+            </div>
+            <div class="profile-links">
+                <a class="profile-link" href="prof-experience.html">
+                    <span class="link-index">01</span>
+                    <span><strong>Experience</strong><small>Roles, responsibilities, and milestones</small></span>
+                    <span class="link-arrow" aria-hidden="true">&#8599;</span>
+                </a>
+                <a class="profile-link" href="skills.html">
+                    <span class="link-index">02</span>
+                    <span><strong>Skills</strong><small>Capabilities and areas of expertise</small></span>
+                    <span class="link-arrow" aria-hidden="true">&#8599;</span>
+                </a>
+                <a class="profile-link" href="assignments.html">
+                    <span class="link-index">03</span>
+                    <span><strong>Selected work</strong><small>Assignments and practical outcomes</small></span>
+                    <span class="link-arrow" aria-hidden="true">&#8599;</span>
+                </a>
+            </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2023 Professional Website. All rights reserved.</p>
+        <p>&copy; <span id="currentYear">2026</span> Professional Portfolio</p>
+        <a href="contact.html">Contact <span aria-hidden="true">&#8599;</span></a>
     </footer>
-    <script src="/HTML/JS/Scripts.js"></script>
+    <script src="JS/Scripts.js"></script>
 </body>
 </html>
