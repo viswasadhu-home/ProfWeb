@@ -1,20 +1,79 @@
-<!-- Example: about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Professional Portfolio</title>
     <link rel="stylesheet" href="CSS/styles.css" />
 </head>
 <body>
-    <!-- Include your header and navigation here if you want consistency -->
+    <header class="site-header">
+        <div class="header-bar">
+            <a class="site-brand" href="index.html" aria-label="Portfolio home">Professional <span>Portfolio</span></a>
+            <nav class="header-nav" aria-label="Primary navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="About.html" aria-current="page">About</a>
+                        <ul class="dropdown-content">
+                            <li><a href="About.html">About</a></li>
+                            <li><a href="personal-details.html">Personal Details</a></li>
+                            <li><a href="prof-experience.html">Professional Experience</a></li>
+                            <li><a href="assignments.html">Assignments</a></li>
+                            <li><a href="skills.html">Skills</a></li>
+                            <li><a href="certifications.html">Certifications</a></li>
+                            <li><a href="awards.html">Awards</a></li>
+                            <li class="theme-menu-item">
+                                <button type="button" id="themeDropdownBtn" aria-expanded="false" aria-controls="themeDropdown">Theme</button>
+                                <div id="themeDropdown" class="theme-dropdown-content">
+                                    <button type="button" data-theme="office-blue">Office Blue</button>
+                                    <button type="button" data-theme="office-orange">Office Orange</button>
+                                    <button type="button" data-theme="office-green">Office Green</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <aside class="side-nav">
+        <nav aria-label="Portfolio sections">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html" aria-current="page">About</a></li>
+                <li><a href="personal-details.html">Personal Details</a></li>
+                <li><a href="prof-experience.html">Professional Experience</a></li>
+                <li><a href="assignments.html">Assignments</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="awards.html">Awards</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
     <main>
-        <section>
-            <h2>About</h2>
-            <p>Background, professional interests, and the experiences that shape my work.</p>
+        <section class="content-intro">
+            <p class="eyebrow">About Viswanath</p>
+            <h2>Turning complex technology programs into dependable outcomes.</h2>
+            <p class="lead-copy">Viswanath is a PMP-certified IT leader and SAFe Program Consultant with more than 25 years of experience in project management, product management, and technical delivery across global enterprises.</p>
+            <p>He has led large, complex programs with a focus on stakeholder alignment, financial oversight, risk management, and reliable execution. His approach combines clear governance and metrics with a strong commitment to team development, mentoring, and continuous improvement.</p>
+            <p>His work spans digital banking, global sales platforms, Salesforce migrations, observability, infrastructure operations, and legacy modernization in banking, healthcare, and other enterprise environments.</p>
+        </section>
+        <section class="content-section">
+            <div class="section-heading">
+                <div><p class="eyebrow">What I bring</p><h2>Core competencies</h2></div>
+            </div>
+            <div class="competency-grid">
+                <article><h3>Leadership &amp; strategy</h3><p>Program and portfolio management, strategic planning, organizational change, Agile and digital transformation.</p></article>
+                <article><h3>Governance &amp; risk</h3><p>Cross-functional operations, major incident leadership, disaster recovery, business continuity, and executive stakeholder alignment.</p></article>
+                <article><h3>Operational excellence</h3><p>ITIL-driven Change and Problem Management, service reliability, process optimization, and metrics-based performance.</p></article>
+                <article><h3>People &amp; culture</h3><p>Team coaching, mentoring project managers and Scrum Masters, and building habits of learning and continuous improvement.</p></article>
+            </div>
         </section>
     </main>
-    <footer>
+    <footer class="status-bar">
         <p>&copy; 2026 Professional Portfolio</p>
     </footer>
     <script src="JS/Scripts.js"></script>

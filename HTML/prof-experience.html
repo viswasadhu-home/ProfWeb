@@ -2,67 +2,126 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Professional Experience</title>
     <link rel="stylesheet" href="CSS/styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Professional Portfolio</h1>
+    <header class="site-header">
         <div class="header-bar">
-            <!-- Header Navigation Bar -->
-            <nav class="header-nav">
+            <a class="site-brand" href="index.html" aria-label="Portfolio home">Professional <span>Portfolio</span></a>
+            <nav class="header-nav" aria-label="Primary navigation">
                 <ul>
-                    <!-- Home Button -->
-                    <li>
-                        <button onclick="window.location.href='index.html'" style="margin-right:1em;padding:0.5em 1em;border:none;background:#005bea;color:#fff;border-radius:4px;cursor:pointer;font-weight:bold;">
-                            Home
-                        </button>
-                    </li>
+                    <li><a href="index.html">Home</a></li>
                     <li class="dropdown">
-                        <a href="about.html">About</a>
+                        <a href="About.html">About</a>
                         <ul class="dropdown-content">
+                            <li><a href="About.html">About</a></li>
                             <li><a href="personal-details.html">Personal Details</a></li>
                             <li><a href="prof-experience.html">Professional Experience</a></li>
                             <li><a href="assignments.html">Assignments</a></li>
                             <li><a href="skills.html">Skills</a></li>
                             <li><a href="certifications.html">Certifications</a></li>
                             <li><a href="awards.html">Awards</a></li>
+                            <li class="theme-menu-item">
+                                <button type="button" id="themeDropdownBtn" aria-expanded="false" aria-controls="themeDropdown">Theme</button>
+                                <div id="themeDropdown" class="theme-dropdown-content">
+                                    <button type="button" data-theme="office-blue">Office Blue</button>
+                                    <button type="button" data-theme="office-orange">Office Orange</button>
+                                    <button type="button" data-theme="office-green">Office Green</button>
+                                </div>
+                            </li>
                         </ul>
                     </li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <!-- Theme Switcher Dropdown Button -->
-            <div class="theme-switcher top-right">
-                <button id="themeDropdownBtn">🎨 Theme</button>
-                <div id="themeDropdown" class="theme-dropdown-content">
-                    <button data-theme="office-blue">Office Blue</button>
-                    <button data-theme="office-orange">Office Orange</button>
-                    <button data-theme="office-green">Office Green</button>
-                </div>
-            </div>
         </div>
     </header>
-    <!-- Side Navigation Bar -->
     <aside class="side-nav">
-        <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="personal-details.html">Personal Details</a></li>
-            <li><a href="prof-experience.html">Professional Experience</a></li>
-            <li><a href="assignments.html">Assignments</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="certifications.html">Certifications</a></li>
-            <li><a href="awards.html">Awards</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+        <nav aria-label="Portfolio sections">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="personal-details.html">Personal Details</a></li>
+                <li><a href="prof-experience.html" aria-current="page">Professional Experience</a></li>
+                <li><a href="assignments.html">Assignments</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="awards.html">Awards</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </aside>
     <main>
-        <section>
+        <section class="content-intro">
+            <p class="eyebrow">Career history</p>
             <h2>Professional Experience</h2>
-            <p>Career history, responsibilities, and key milestones.</p>
+            <p class="lead-copy">Senior delivery, program, and transformation leadership across global enterprise environments.</p>
+        </section>
+        <section class="career-timeline" aria-label="Career timeline">
+            <article class="career-entry">
+                <div class="career-date">Oct 2025 - Present</div>
+                <div><h3>Senior Delivery Manager &amp; Agile Coach <span>Heineken | Global Observability Platform</span></h3>
+                    <p>Leading an enterprise observability program to improve reliability and operational visibility across critical digital and supply-chain platforms.</p>
+                    <ul><li>Defined the observability roadmap, platform standards, and tool rationalization.</li><li>Led centralized dashboards, distributed tracing, log analytics, golden signals, SLOs, and alerting practices.</li><li>Advanced Site Reliability Engineering adoption and governed budgets, risks, dependencies, and delivery.</li></ul>
+                    <p class="tech-note">New Relic | ServiceNow | Jira | Confluence</p>
+                </div>
+            </article>
+            <article class="career-entry">
+                <div class="career-date">May 2024 - Apr 2025</div>
+                <div><h3>Senior Delivery Manager &amp; Agile Coach <span>Union Bank of India | Digital Banking Platform</span></h3>
+                    <p>Led a unified digital banking platform serving retail, corporate, and agricultural customers across mobile apps, web portals, and integrated APIs.</p>
+                    <ul><li>Delivered a multi-product platform for five customer segments on time and within budget.</li><li>Led a cross-functional team of 40+ and achieved a 95% customer satisfaction score.</li><li>Improved delivery velocity by 40%, user adoption and engagement by 25%, and maintained 100% audit readiness through disaster-recovery drills.</li></ul>
+                    <p class="tech-note">Java | React | React Native | Spring Boot | IBM Verify | IBM Cloud</p>
+                </div>
+            </article>
+            <article class="career-entry">
+                <div class="career-date">Jun 2023 - Dec 2023</div>
+                <div><h3>Senior Technical Program Manager <span>Google CAPE | Salesforce Migration Program</span></h3>
+                    <p>Led a multi-organization vendor transition supporting seven Google divisions.</p>
+                    <ul><li>Migrated seven third-party Salesforce systems and 12 internal applications in two months, with no business disruption.</li><li>Onboarded 50+ team members in two weeks and coordinated three cross-functional teams.</li><li>Established tiered incident governance to improve mean time to resolution.</li></ul>
+                    <p class="tech-note">Salesforce | Java</p>
+                </div>
+            </article>
+            <article class="career-entry">
+                <div class="career-date">Jul 2021 - Apr 2023</div>
+                <div><h3>Senior Delivery Manager &amp; Agile Coach <span>Baxter Healthcare | Global B2B Sales Portal</span></h3>
+                    <p>Turned around a troubled fixed-bid Salesforce portal program and delivered its launch across 23+ countries.</p>
+                    <ul><li>Realigned resources and stakeholders to move the program from Red/Amber to Green.</li><li>Reduced program risk by 30% and coached 15+ Agile team members.</li><li>Delivered a $2.5M program within budget with 100% on-time delivery.</li></ul>
+                    <p class="tech-note">Salesforce | Integration APIs</p>
+                </div>
+            </article>
+            <article class="career-entry">
+                <div class="career-date">Jul 2019 - Jul 2020</div>
+                <div><h3>Agile Coach &amp; Process Transformation Lead <span>General Motors | CDAO Modernization</span></h3>
+                    <p>Led Agile transformation for the Chief Data and Analytics Office.</p>
+                    <ul><li>Identified 40% process-efficiency improvements across three workstreams.</li><li>Created reusable Agile templates adopted by 200+ team members and introduced portfolio visibility dashboards and KPI frameworks.</li></ul>
+                    <p class="tech-note">Scaled Agile | SharePoint | TFS | Analytics platforms</p>
+                </div>
+            </article>
+            <article class="career-entry">
+                <div class="career-date">Jul 2017 - Jul 2019</div>
+                <div><h3>Project Manager &amp; Agile Transformation Lead <span>Westpac Corporation | Legacy Modernization</span></h3>
+                    <p>Managed VB6-to-VB.NET modernization for 12 critical applications while guiding a 25+ person team through a Waterfall-to-Agile transition.</p>
+                    <ul><li>Delivered production deployments with zero defects.</li><li>Led project management and software configuration management across three time zones.</li></ul>
+                    <p class="tech-note">VB6 | VB.NET | Jira | Confluence</p>
+                </div>
+            </article>
+            <article class="career-entry earlier-career">
+                <div class="career-date">2005 - 2017</div>
+                <div><h3>Delivery, project, and DevOps leadership <span>IBM | Multiple enterprise assignments</span></h3>
+                    <p>Progressed through delivery management, project management, and DevOps consulting assignments for global financial services and enterprise clients.</p>
+                    <p class="tech-note">JP Morgan Chase | IBM DevOps Competency | SunTrust | Citibank | Standard Insurance | Nationwide | Bank of Montreal</p>
+                </div>
+            </article>
+            <article class="career-entry earlier-career">
+                <div class="career-date">Earlier career</div>
+                <div><h3>Technical Team Lead &amp; Application Developer <span>British Petroleum | E-Merchant Bank</span></h3></div>
+            </article>
         </section>
     </main>
-    <footer>
+    <footer class="status-bar">
         <p>&copy; 2026 Professional Portfolio</p>
     </footer>
     <script src="JS/Scripts.js"></script>

@@ -2,17 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Professional Portfolio</title>
     <link rel="stylesheet" href="CSS/styles.css" />
 </head>
 <body>
+    <header class="site-header">
+        <div class="header-bar">
+            <a class="site-brand" href="index.html" aria-label="Portfolio home">Professional <span>Portfolio</span></a>
+            <nav class="header-nav" aria-label="Primary navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="About.html">About</a>
+                        <ul class="dropdown-content">
+                            <li><a href="About.html">About</a></li>
+                            <li><a href="personal-details.html">Personal Details</a></li>
+                            <li><a href="prof-experience.html">Professional Experience</a></li>
+                            <li><a href="assignments.html">Assignments</a></li>
+                            <li><a href="skills.html">Skills</a></li>
+                            <li><a href="certifications.html">Certifications</a></li>
+                            <li><a href="awards.html">Awards</a></li>
+                            <li class="theme-menu-item">
+                                <button type="button" id="themeDropdownBtn" aria-expanded="false" aria-controls="themeDropdown">Theme</button>
+                                <div id="themeDropdown" class="theme-dropdown-content">
+                                    <button type="button" data-theme="office-blue">Office Blue</button>
+                                    <button type="button" data-theme="office-orange">Office Orange</button>
+                                    <button type="button" data-theme="office-green">Office Green</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <aside class="side-nav">
+        <nav aria-label="Portfolio sections">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="personal-details.html">Personal Details</a></li>
+                <li><a href="prof-experience.html">Professional Experience</a></li>
+                <li><a href="assignments.html">Assignments</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="awards.html">Awards</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
     <main>
-        <section>
-            <h2>Contact</h2>
-            <p>Contact details for professional enquiries.</p>
+        <section class="content-intro">
+            <p class="eyebrow">Contact</p>
+            <h2>Let’s connect.</h2>
+            <p class="lead-copy">For professional enquiries, program leadership opportunities, or conversations about Agile and delivery transformation, contact me directly.</p>
+        </section>
+        <section class="contact-details" aria-label="Contact details">
+            <div><span>Email</span><a href="mailto:Viswanath@in.ibm.com">Viswanath@in.ibm.com</a></div>
+            <div><span>Phone</span><a href="tel:+919395134956">+91 93951 34956</a></div>
         </section>
     </main>
-    <footer>
+    <footer class="status-bar">
         <p>&copy; 2026 Professional Portfolio</p>
     </footer>
     <script src="JS/Scripts.js"></script>

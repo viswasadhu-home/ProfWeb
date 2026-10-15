@@ -2,17 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Awards</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awards | Professional Portfolio</title>
     <link rel="stylesheet" href="CSS/styles.css" />
 </head>
 <body>
+    <header class="site-header">
+        <div class="header-bar">
+            <a class="site-brand" href="index.html" aria-label="Portfolio home">Professional <span>Portfolio</span></a>
+            <nav class="header-nav" aria-label="Primary navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="About.html">About</a>
+                        <ul class="dropdown-content">
+                            <li><a href="About.html">About</a></li>
+                            <li><a href="personal-details.html">Personal Details</a></li>
+                            <li><a href="prof-experience.html">Professional Experience</a></li>
+                            <li><a href="assignments.html">Assignments</a></li>
+                            <li><a href="skills.html">Skills</a></li>
+                            <li><a href="certifications.html">Certifications</a></li>
+                            <li><a href="awards.html" aria-current="page">Awards</a></li>
+                            <li class="theme-menu-item">
+                                <button type="button" id="themeDropdownBtn" aria-expanded="false" aria-controls="themeDropdown">Theme</button>
+                                <div id="themeDropdown" class="theme-dropdown-content">
+                                    <button type="button" data-theme="office-blue">Office Blue</button>
+                                    <button type="button" data-theme="office-orange">Office Orange</button>
+                                    <button type="button" data-theme="office-green">Office Green</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <aside class="side-nav">
+        <nav aria-label="Portfolio sections">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="personal-details.html">Personal Details</a></li>
+                <li><a href="prof-experience.html">Professional Experience</a></li>
+                <li><a href="assignments.html">Assignments</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="awards.html" aria-current="page">Awards</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
     <main>
-        <section>
-            <h2>Awards</h2>
-            <p>Recognition and milestones from my professional journey.</p>
+        <section class="content-intro">
+            <p class="eyebrow">Recognition</p>
+            <h2>Awards &amp; contributions</h2>
+            <p class="lead-copy">Recognition for program delivery, technical innovation, client outcomes, and leadership.</p>
+        </section>
+        <section class="award-list" aria-label="Awards and recognition">
+            <article><div><h3>IBM Growth Award</h3><p>Outstanding program delivery and team leadership</p></div><strong>2020, 2021</strong></article>
+            <article><div><h3>IBM Excellence &amp; Eminence Award</h3><p>Technical innovation and client satisfaction</p></div><strong>2013, 2014</strong></article>
+            <article><div><h3>IBM Top Performer</h3><p>Exceptional individual contribution and results</p></div><strong>2007, 2009</strong></article>
+            <article><div><h3>IBM Top Talent Award</h3><p>High-potential leadership recognition</p></div><strong>2007, 2008</strong></article>
+            <article><div><h3>IBM Bravo Award</h3><p>Immediate recognition for exceptional client delivery</p></div><strong>2008</strong></article>
+            <article><div><h3>Satyam Delivery Excellence Award</h3><p>Outstanding project delivery and quality standards</p></div><strong>2004</strong></article>
+        </section>
+        <section class="content-section">
+            <div class="section-heading"><div><p class="eyebrow">Organizational givebacks</p><h2>Building capability beyond the program</h2></div></div>
+            <ul class="impact-list">
+                <li>Trained 250+ IBM professionals in SAFe methodologies as a certified SAFe Program Consultant.</li>
+                <li>Delivered DevOps sessions for 150+ team members and led quality-awareness programs across IBM delivery centers.</li>
+                <li>Mentored 20+ project managers and Scrum Masters in Agile transformation practices.</li>
+                <li>Developed an internal image-resizer tool adopted by IBM mobile UI development teams.</li>
+                <li>Created reusable process templates to standardize delivery practices across the organization.</li>
+            </ul>
         </section>
     </main>
-    <footer>
+    <footer class="status-bar">
         <p>&copy; 2026 Professional Portfolio</p>
     </footer>
     <script src="JS/Scripts.js"></script>

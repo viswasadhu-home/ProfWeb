@@ -2,67 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Details</title>
     <link rel="stylesheet" href="CSS/styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Professional Portfolio</h1>
+    <header class="site-header">
         <div class="header-bar">
-            <!-- Header Navigation Bar -->
-            <nav class="header-nav">
+            <a class="site-brand" href="index.html" aria-label="Portfolio home">Professional <span>Portfolio</span></a>
+            <nav class="header-nav" aria-label="Primary navigation">
                 <ul>
-                    <!-- Home Button -->
-                    <li>
-                        <button onclick="window.location.href='index.html'" style="margin-right:1em;padding:0.5em 1em;border:none;background:#005bea;color:#fff;border-radius:4px;cursor:pointer;font-weight:bold;">
-                            Home
-                        </button>
-                    </li>
+                    <li><a href="index.html">Home</a></li>
                     <li class="dropdown">
-                        <a href="about.html">About</a>
+                        <a href="About.html">About</a>
                         <ul class="dropdown-content">
+                            <li><a href="About.html">About</a></li>
                             <li><a href="personal-details.html">Personal Details</a></li>
                             <li><a href="prof-experience.html">Professional Experience</a></li>
                             <li><a href="assignments.html">Assignments</a></li>
                             <li><a href="skills.html">Skills</a></li>
                             <li><a href="certifications.html">Certifications</a></li>
                             <li><a href="awards.html">Awards</a></li>
+                            <li class="theme-menu-item">
+                                <button type="button" id="themeDropdownBtn" aria-expanded="false" aria-controls="themeDropdown">Theme</button>
+                                <div id="themeDropdown" class="theme-dropdown-content">
+                                    <button type="button" data-theme="office-blue">Office Blue</button>
+                                    <button type="button" data-theme="office-orange">Office Orange</button>
+                                    <button type="button" data-theme="office-green">Office Green</button>
+                                </div>
+                            </li>
                         </ul>
                     </li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <!-- Theme Switcher Dropdown Button -->
-            <div class="theme-switcher top-right">
-                <button id="themeDropdownBtn">🎨 Theme</button>
-                <div id="themeDropdown" class="theme-dropdown-content">
-                    <button data-theme="office-blue">Office Blue</button>
-                    <button data-theme="office-orange">Office Orange</button>
-                    <button data-theme="office-green">Office Green</button>
-                </div>
-            </div>
         </div>
     </header>
-    <!-- Side Navigation Bar -->
     <aside class="side-nav">
-        <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="personal-details.html">Personal Details</a></li>
-            <li><a href="prof-experience.html">Professional Experience</a></li>
-            <li><a href="assignments.html">Assignments</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="certifications.html">Certifications</a></li>
-            <li><a href="awards.html">Awards</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+        <nav aria-label="Portfolio sections">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="personal-details.html" aria-current="page">Personal Details</a></li>
+                <li><a href="prof-experience.html">Professional Experience</a></li>
+                <li><a href="assignments.html">Assignments</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="awards.html">Awards</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </aside>
     <main>
-        <section>
-            <h2>Personal Details</h2>
-            <p>Personal profile and background information.</p>
+        <section class="content-intro">
+            <p class="eyebrow">Profile</p>
+            <h2>Viswanath Sadhu</h2>
+            <p class="lead-copy">PMP-certified Senior Delivery Manager, Agile Coach, and SAFe Program Consultant.</p>
+            <div class="contact-line">
+                <a href="mailto:Viswanath@in.ibm.com">Viswanath@in.ibm.com</a>
+                <a href="tel:+919395134956">+91 93951 34956</a>
+            </div>
+        </section>
+        <section class="content-section">
+            <div class="section-heading"><div><p class="eyebrow">Education</p><h2>Academic background</h2></div></div>
+            <div class="detail-list">
+                <div><strong>Master of Computer Applications (MCA)</strong><span>Viswa Bharati PG College, Osmania University | 1999</span></div>
+                <div><strong>Bachelor of Science, Computer Science</strong><span>New Science College, Osmania University | 1995</span></div>
+                <div><strong>Intermediate (Class XII)</strong><span>Noble Junior College, Board of Intermediate Education, Andhra Pradesh | 1992</span></div>
+                <div><strong>Secondary School (Class X)</strong><span>B.K.B. High School | 1990</span></div>
+            </div>
+        </section>
+        <section class="content-section">
+            <div class="section-heading"><div><p class="eyebrow">Languages</p><h2>Communication</h2></div></div>
+            <ul class="tag-list"><li>English - Fluent</li><li>Telugu - Fluent</li><li>Hindi - Fluent</li></ul>
+            <p class="membership-note"><strong>Professional memberships:</strong> Project Management Institute (PMI) and Scaled Agile.</p>
         </section>
     </main>
-    <footer>
+    <footer class="status-bar">
         <p>&copy; 2026 Professional Portfolio</p>
     </footer>
     <script src="JS/Scripts.js"></script>

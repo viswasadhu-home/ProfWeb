@@ -1,67 +1,89 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Professional website loaded successfully.');
     
-    // Enable dynamic dropdowns for both header and side navigation
     document.querySelectorAll('.dropdown').forEach(function (dropdown) {
-        // For accessibility: open on click for mobile, hover for desktop
         const link = dropdown.querySelector('a');
         const dropdownContent = dropdown.querySelector('.dropdown-content');
+        link.setAttribute('aria-haspopup', 'true');
+        link.setAttribute('aria-expanded', 'false');
 
-        // Toggle dropdown on click (for mobile/touch)
         link.addEventListener('click', function (e) {
-            // Prevent navigation if dropdown exists
             if (dropdownContent) {
                 e.preventDefault();
-                // Close other open dropdowns
-                document.querySelectorAll('.dropdown-content').forEach(function (el) {
-                    if (el !== dropdownContent) el.style.display = 'none';
+                const isOpen = link.getAttribute('aria-expanded') === 'true';
+                document.querySelectorAll('.dropdown').forEach(function (otherDropdown) {
+                    const otherLink = otherDropdown.querySelector('a');
+                    const otherContent = otherDropdown.querySelector('.dropdown-content');
+                    if (otherDropdown !== dropdown && otherContent) {
+                        otherContent.style.display = 'none';
+                        otherLink.setAttribute('aria-expanded', 'false');
+                    }
                 });
-                // Toggle current dropdown
-                dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+                dropdownContent.style.display = isOpen ? 'none' : 'block';
+                link.setAttribute('aria-expanded', String(!isOpen));
             }
         });
 
-        // Hide dropdown when clicking outside
         document.addEventListener('click', function (e) {
             if (!dropdown.contains(e.target)) {
-                if (dropdownContent) dropdownContent.style.display = 'none';
-            }
-        });
-
-        // Show/hide on hover for desktop
-        dropdown.addEventListener('mouseenter', function () {
-            if (window.innerWidth > 900 && dropdownContent) {
-                dropdownContent.style.display = 'block';
-            }
-        });
-        dropdown.addEventListener('mouseleave', function () {
-            if (window.innerWidth > 900 && dropdownContent) {
-                dropdownContent.style.display = 'none';
+                if (dropdownContent) {
+                    dropdownContent.style.display = 'none';
+                    link.setAttribute('aria-expanded', 'false');
+                }
             }
         });
     });
 
-    // Theme Switcher Dropdown Logic
-    // Dropdown for theme switcher
     const themeBtn = document.getElementById('themeDropdownBtn');
     const themeDropdown = document.getElementById('themeDropdown');
     if (themeBtn && themeDropdown) {
+        const themeOptions = ['office-blue', 'office-orange', 'office-green'];
+
+        function applyTheme(theme, persist) {
+            document.body.classList.remove('office-blue', 'office-orange', 'office-green');
+            if (theme !== 'office-blue') {
+                document.body.classList.add(theme);
+            }
+            if (persist) {
+                try {
+                    if (theme === 'office-blue') {
+                        localStorage.removeItem('portfolio-theme');
+                    } else {
+                        localStorage.setItem('portfolio-theme', theme);
+                    }
+                } catch (error) {
+                    console.warn('Theme preference could not be saved.');
+                }
+            }
+        }
+
+        try {
+            const savedTheme = localStorage.getItem('portfolio-theme');
+            if (themeOptions.includes(savedTheme)) {
+                applyTheme(savedTheme, false);
+            }
+        } catch (error) {
+            console.warn('Theme preference could not be loaded.');
+        }
+
+        themeBtn.setAttribute('aria-expanded', 'false');
         themeBtn.addEventListener('click', function (e) {
             e.stopPropagation();
-            themeDropdown.style.display = themeDropdown.style.display === 'flex' ? 'none' : 'flex';
+            const isOpen = themeBtn.getAttribute('aria-expanded') === 'true';
+            themeDropdown.style.display = isOpen ? 'none' : 'flex';
+            themeBtn.setAttribute('aria-expanded', String(!isOpen));
         });
         document.addEventListener('click', function (e) {
-            if (!themeDropdown.contains(e.target) && e.target !== themeBtn) {
+            if (!themeDropdown.parentElement.contains(e.target)) {
                 themeDropdown.style.display = 'none';
+                themeBtn.setAttribute('aria-expanded', 'false');
             }
         });
-        themeDropdown.querySelectorAll('button[data-theme]').forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                document.body.classList.remove('office-blue', 'office-orange', 'office-green');
-                if (btn.dataset.theme !== 'office-blue') {
-                    document.body.classList.add(btn.dataset.theme);
-                }
+        themeDropdown.querySelectorAll('button[data-theme]').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                applyTheme(btn.dataset.theme, true);
                 themeDropdown.style.display = 'none';
+                themeBtn.setAttribute('aria-expanded', 'false');
             });
         });
     }

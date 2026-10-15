@@ -2,17 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Skills</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills | Professional Portfolio</title>
     <link rel="stylesheet" href="CSS/styles.css" />
 </head>
 <body>
+    <header class="site-header">
+        <div class="header-bar">
+            <a class="site-brand" href="index.html" aria-label="Portfolio home">Professional <span>Portfolio</span></a>
+            <nav class="header-nav" aria-label="Primary navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="About.html">About</a>
+                        <ul class="dropdown-content">
+                            <li><a href="About.html">About</a></li>
+                            <li><a href="personal-details.html">Personal Details</a></li>
+                            <li><a href="prof-experience.html">Professional Experience</a></li>
+                            <li><a href="assignments.html">Assignments</a></li>
+                            <li><a href="skills.html" aria-current="page">Skills</a></li>
+                            <li><a href="certifications.html">Certifications</a></li>
+                            <li><a href="awards.html">Awards</a></li>
+                            <li class="theme-menu-item">
+                                <button type="button" id="themeDropdownBtn" aria-expanded="false" aria-controls="themeDropdown">Theme</button>
+                                <div id="themeDropdown" class="theme-dropdown-content">
+                                    <button type="button" data-theme="office-blue">Office Blue</button>
+                                    <button type="button" data-theme="office-orange">Office Orange</button>
+                                    <button type="button" data-theme="office-green">Office Green</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <aside class="side-nav">
+        <nav aria-label="Portfolio sections">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="personal-details.html">Personal Details</a></li>
+                <li><a href="prof-experience.html">Professional Experience</a></li>
+                <li><a href="assignments.html">Assignments</a></li>
+                <li><a href="skills.html" aria-current="page">Skills</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="awards.html">Awards</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
     <main>
-        <section>
-            <h2>Skills</h2>
-            <p>Capabilities and areas of professional expertise.</p>
+        <section class="content-intro">
+            <p class="eyebrow">Capabilities</p>
+            <h2>Skills &amp; areas of expertise</h2>
+            <p class="lead-copy">A blend of strategic program leadership, hands-on delivery governance, and enterprise technology oversight.</p>
+        </section>
+        <section class="skill-groups" aria-label="Professional skills">
+            <article class="skill-group"><h3>Leadership &amp; transformation</h3><ul class="tag-list"><li>Program &amp; portfolio management</li><li>Strategic planning</li><li>Agile transformation</li><li>Digital transformation</li><li>Organizational change</li><li>Stakeholder engagement</li><li>Team development</li></ul></article>
+            <article class="skill-group"><h3>Delivery &amp; governance</h3><ul class="tag-list"><li>Financial oversight</li><li>Risk management</li><li>Cross-functional governance</li><li>Major incident management</li><li>Disaster recovery</li><li>Business continuity</li><li>Service reliability</li></ul></article>
+            <article class="skill-group"><h3>Methods &amp; frameworks</h3><ul class="tag-list"><li>Agile</li><li>Scrum</li><li>Kanban</li><li>SAFe</li><li>DevOps</li><li>Waterfall &amp; hybrid</li><li>Lean Six Sigma</li><li>ITIL</li><li>Quality assurance</li></ul></article>
+            <article class="skill-group"><h3>Platforms &amp; tools</h3><ul class="tag-list"><li>Azure, IBM &amp; Google Cloud</li><li>Salesforce</li><li>Microsoft .NET</li><li>Enterprise architecture</li><li>ServiceNow</li><li>Jira &amp; Confluence</li><li>Azure DevOps</li><li>Jenkins &amp; Git</li><li>Power BI</li><li>Microsoft Project</li><li>New Relic</li><li>Database management</li></ul></article>
         </section>
     </main>
-    <footer>
+    <footer class="status-bar">
         <p>&copy; 2026 Professional Portfolio</p>
     </footer>
     <script src="JS/Scripts.js"></script>
