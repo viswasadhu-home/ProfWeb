@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Professional profile, experience, skills, assignments, certifications, and contact information." />
+    <title>Viswanath Sadhu | Technology &amp; Delivery Leadership</title>
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="stylesheet" href="CSS/clark-theme.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-bar">
+            <a class="site-brand" href="index.html" aria-label="Portfolio home">Viswanath <span>Sadhu</span></a>
+            <nav class="header-nav" aria-label="Primary navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="About.html">About Me</a>
+                        <ul class="dropdown-content">
+                            <li><a href="About.html">About Me</a></li>
+                            <li><a href="personal-details.html">Personal Details</a></li>
+                            <li><a href="prof-experience.html">Resume</a></li>
+                            <li><a href="assignments.html">My Projects</a></li>
+                            <li><a href="skills.html">My Skills</a></li>
+                            <li><a href="certifications.html">Certifications</a></li>
+                            <li><a href="awards.html">Awards</a></li>
+                        </ul>
+                    </li>
+                    <li class="theme-menu-item">
+                        <button type="button" id="themeDropdownBtn" aria-expanded="false" aria-controls="themeDropdown">Theme</button>
+                        <div id="themeDropdown" class="theme-dropdown-content">
+                            <button type="button" data-theme="office-blue">Office Blue</button>
+                            <button type="button" data-theme="office-orange">Office Orange</button>
+                            <button type="button" data-theme="office-green">Office Green</button>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <aside class="side-nav">
+        <nav aria-label="Portfolio sections">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About Me</a></li>
+                <li><a href="personal-details.html">Personal Details</a></li>
+                <li><a href="prof-experience.html">Resume</a></li>
+                <li><a href="assignments.html">My Projects</a></li>
+                <li><a href="skills.html">My Skills</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="awards.html">Awards</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <section class="intro-section" aria-labelledby="intro-title">
+            <div class="intro-copy">
+                <p class="eyebrow">Hello, I&rsquo;m</p>
+                <h1 id="intro-title">Viswanath <span>Sadhu</span></h1>
+                <p class="intro-role">IT Transformation Leader &middot; Program Manager &middot; Agile Coach</p>
+                <p class="intro-summary">PMP-certified and SAFe 6 Practice Consultant with 25+ years delivering business and technology transformation across global enterprises. Specialises in program and product management, Agile delivery, cloud adoption, and DevOps.</p>
+                <div class="intro-actions">
+                    <a class="button button-primary" href="prof-experience.html">My resume <span aria-hidden="true">&#8594;</span></a>
+                    <a class="text-link" href="contact.html">Contact me</a>
+                </div>
+            </div>
+            <figure class="portrait-frame">
+                <img src="img/profile-placeholder.png" alt="Professional portrait" />
+                <figcaption>Viswanath Sadhu | Technology &amp; Delivery Leadership</figcaption>
+            </figure>
+        </section>
+        <section class="proof-strip" aria-label="Career highlights">
+            <div><strong>25+</strong><span>years in technology delivery</span></div>
+            <div><strong>50+</strong><span>professionals led across global programs</span></div>
+            <div><strong>23+</strong><span>countries reached by a B2B portal</span></div>
+            <div><strong>250+</strong><span>professionals trained in SAFe</span></div>
+        </section>
+        <section class="profile-section" aria-labelledby="explore-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Explore</p>
+                    <h2 id="explore-title">Leadership, transformation, and outcomes</h2>
+                </div>
+                <a class="text-link" href="About.html">View profile <span aria-hidden="true">&#8594;</span></a>
+            </div>
+            <div class="profile-links">
+                <a class="profile-link" href="prof-experience.html">
+                    <span class="link-index">01</span>
+                    <span><strong>My Resume</strong><small>25+ years across global enterprise programs</small></span>
+                    <span class="link-arrow" aria-hidden="true">&#8599;</span>
+                </a>
+                <a class="profile-link" href="skills.html">
+                    <span class="link-index">02</span>
+                    <span><strong>My Skills</strong><small>Program delivery, Agile, SRE, DevOps, and cloud</small></span>
+                    <span class="link-arrow" aria-hidden="true">&#8599;</span>
+                </a>
+                <a class="profile-link" href="assignments.html">
+                    <span class="link-index">03</span>
+                    <span><strong>My Projects</strong><small>Digital banking, observability, Salesforce, and modernization</small></span>
+                    <span class="link-arrow" aria-hidden="true">&#8599;</span>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer class="status-bar">
+        <p>&copy; <span id="currentYear">2026</span> Professional Portfolio</p>
+        <a href="contact.html">Contact Me <span aria-hidden="true">&#8599;</span></a>
+    </footer>
+    <script src="JS/Scripts.js"></script>
+</body>
+</html>
